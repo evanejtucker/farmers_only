@@ -22,4 +22,9 @@ describe('HomeComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+  it('should render title contained in a h3 tag', () => {
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('this is from the home component');
+  });
 });
